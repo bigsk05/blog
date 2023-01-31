@@ -1,1 +1,1 @@
-[]
+[{"title":"Docker搭建RTMP服务器","date":"2021-09-19T16:00:00.000Z","url":"/2021/09/20/Docker%E6%90%AD%E5%BB%BARTMP%E6%9C%8D%E5%8A%A1%E5%99%A8/","tags":[["技术","/tags/%E6%8A%80%E6%9C%AF/"]],"categories":[["技术","/categories/%E6%8A%80%E6%9C%AF/"]],"content":"正好在解决相关的问题,网上大部分人使用的是alfg&#x2F;nginx-rtmp，这个包很好，自带FLV流转HLS，但是我的场景内不需要转换，而且这个包没使用GPU编码，而且这个包默认不使用GPU编码，HLS流自动转换浪费了服务器大量的CPU性能，所以我自己Docker Hub找到了这样一个包：tiangolo&#x2F;nginx-rtmp，只有纯净的RTMP+NGINX服务器的实现，几乎没有额外的CPU开销，性能非常好，可以直接使用rtmp协议再次把流拉下来观看。拉取包： 运行容器： 然后只需要把流推送到 rtmp:&#x2F;&#x2F;IP_ADDRESS&#x2F;live&#x2F;STREAM_NAME 这个地址就可以了"}]
