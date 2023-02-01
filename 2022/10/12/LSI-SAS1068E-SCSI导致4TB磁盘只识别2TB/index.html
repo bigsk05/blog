@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Code The World">
 <meta property="og:description" content="因为工作室旧的文件服务器性能不足，打算将存储服务器的任务交给其他服务器处理，于是试图把原先的存储服务器中的两块硬盘（4TB+128GB）换到刀片服务器上。插电开机，进入Proxmox VE：欸？说好的4TB呢！看了，确定不是GPT分区的问题，百度上都在放屁，你看fdisk在物理层面上认了2TB整，一点都不差，肯定不是磁盘本身问题：还是Google一下，这马上就发现问题了：  It seems th">
 <meta property="og:locale">
-<meta property="og:image" content="https://blog.ianxia.com/usr/uploads/2022/10/71191206.png">
-<meta property="og:image" content="https://blog.ianxia.com/usr/uploads/2022/10/3101002226.png">
+<meta property="og:image" content="https://3-cdn.ianxia.com/enclosure/name/2022/LSI-SAS1068E-SCSI-Problem/71191206.png">
+<meta property="og:image" content="https://3-cdn.ianxia.com/enclosure/name/2022/LSI-SAS1068E-SCSI-Problem/3101002226.png">
 <meta property="article:published_time" content="2022-10-11T16:55:00.000Z">
-<meta property="article:modified_time" content="2023-01-31T17:44:43.695Z">
+<meta property="article:modified_time" content="2023-02-01T14:01:11.803Z">
 <meta property="article:author" content="Bigsk">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.ianxia.com/usr/uploads/2022/10/71191206.png">
+<meta name="twitter:image" content="https://3-cdn.ianxia.com/enclosure/name/2022/LSI-SAS1068E-SCSI-Problem/71191206.png">
   
   <!-- 站点验证相关 -->
   
@@ -208,13 +208,13 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1675187083695"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1675260071803"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
             <hr />
-            <div itemprop="articleBody"><p>因为工作室旧的文件服务器性能不足，打算将存储服务器的任务交给其他服务器处理，于是试图把原先的存储服务器中的两块硬盘（4TB+128GB）换到刀片服务器上。插电开机，进入Proxmox VE：<br><img src="https://blog.ianxia.com/usr/uploads/2022/10/71191206.png" alt="2022-10-11T16:49:18.png"><br>欸？说好的4TB呢！看了，确定不是GPT分区的问题，百度上都在放屁，你看fdisk在物理层面上认了2TB整，一点都不差，肯定不是磁盘本身问题：<br><img src="https://blog.ianxia.com/usr/uploads/2022/10/3101002226.png" alt="2022-10-11T16:51:43.png"><br>还是Google一下，这马上就发现问题了：</p>
+            <div itemprop="articleBody"><p>因为工作室旧的文件服务器性能不足，打算将存储服务器的任务交给其他服务器处理，于是试图把原先的存储服务器中的两块硬盘（4TB+128GB）换到刀片服务器上。插电开机，进入Proxmox VE：<br><img src="https://3-cdn.ianxia.com/enclosure/name/2022/LSI-SAS1068E-SCSI-Problem/71191206.png" alt="2022-10-11T16:49:18.png"><br>欸？说好的4TB呢！看了，确定不是GPT分区的问题，百度上都在放屁，你看fdisk在物理层面上认了2TB整，一点都不差，肯定不是磁盘本身问题：<br><img src="https://3-cdn.ianxia.com/enclosure/name/2022/LSI-SAS1068E-SCSI-Problem/3101002226.png" alt="2022-10-11T16:51:43.png"><br>还是Google一下，这马上就发现问题了：</p>
 <blockquote>
 <p>It seems the issue is that some drives are attached to the LSI SAS1068E SCSI storage controller and that one has a 2 TB drive limitation.</p>
 </blockquote>
@@ -309,7 +309,7 @@
                     <a class="tag-none-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-01-31T17:44:43.695Z" itemprop="dateModified">最后编辑：2023-02-01</time>
+                    <time datetime="2023-02-01T14:01:11.803Z" itemprop="dateModified">最后编辑：2023-02-01</time>
                 </div>
             </div>
         </footer>
